@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terraria Fan Site</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#1e1e1e, #0d0d0d);
+            color: #e6e6e6;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            background: #202020;
+            border-bottom: 2px solid #4caf50;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #55ff55;
+            text-shadow: 0 0 10px #4caf50;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #7cff7c;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+            text-shadow: 0 0 10px #4caf50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #262626;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #55ff55;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            background: #55ff55;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #9fff9f;
+            box-shadow: 0 0 10px #4caf50;
+        }
+
+        .secret {
+            display: none;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #c3ffc3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #888;
+            margin-top: 40px;
+        }
+
+        /* проста анімація */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Terraria Fan Site</h1>
+</header>
+
+<nav>
+    <a href="#about">Про гру</a>
+    <a href="#bosses">Боси</a>
+    <a href="#biomes">Біоми</a>
+    <a href="#secret">Секрет</a>
+</nav>
+
+<div class="container">
+
+    <section id="about" class="card animated">
+        <h2>Про Terraria</h2>
+        <p>
+            Terraria — це пригодницька 2D-пісочниця, де гравець досліджує світ, копає ресурси, будує споруди,
+            бореться з монстрами та проходить босів. Гра поєднує елементи виживання, RPG та крафту.
+        </p>
+    </section>
+
+    <section id="bosses" class="card animated">
+        <h2>Головні боси</h2>
+        <ul>
+            <li>👁️ Eye of Cthulhu</li>
+            <li>🧠 Brain of Cthulhu</li>
+            <li>🐍 Eater of Worlds</li>
+            <li>💀 Skeletron</li>
+            <li>🔥 Wall of Flesh</li>
+            <li>🌙 Moon Lord</li>
+        </ul>
+    </section>
+
+    <section id="biomes" class="card animated">
+        <h2>Біоми Terraria</h2>
+        <ul>
+            <li>🌳 Ліс</li>
+            <li>❄️ Сніжний біом</li>
+            <li>🔥 Пекло</li>
+            <li>💜 Корупція</li>
+            <li>❤️ Крамсон</li>
+            <li>🌵 Пустеля</li>
+            <li>🟣 Грибний біом</li>
+        </ul>
+    </section>
+
+    <section id="secret" class="card animated">
+        <h2>Натисни, щоб дізнатися секрет Terraria</h2>
+        <button class="btn" onclick="showSecret()">Показати секрет</button>
+        <p id="secretText" class="secret">
+            🌟 *У Terraria завжди є ще одна таємниця, яку ти ще не відкрив…*  
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    Terraria Fan Site © 2025
+</footer>
+
+<script>
+    function showSecret() {
+        const t = document.getElementById("secretText");
+        t.style.display = t.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>
